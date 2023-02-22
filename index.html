@@ -12,8 +12,11 @@
 <body>
     <div id="app">
         <h1>
-            {{ message }}
-
+            <ul>
+                <li v-for="subject in boolean_subjects">
+                    {{ subject.subject }}
+                </li>
+            </ul>
         </h1>
     </div>
 
