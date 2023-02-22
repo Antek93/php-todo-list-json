@@ -13,7 +13,7 @@ createApp({
 
     },
     created() {
-        console.log(axios)
+        console.log(axios);
     }
 
 }).mount('#app')
