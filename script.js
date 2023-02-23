@@ -6,7 +6,7 @@ createApp({
     data() {
         return {
             boolean_subjects: [],
-            newSubject: '',
+            userSubject: '',
         };
 
     },
@@ -14,6 +14,22 @@ createApp({
         cross(element) {
             element.done = !element.done
 
+        },
+        addSubject() {
+            axios.post('api.php', {
+                newSubject: this.userSubject,
+                
+
+            }, {
+                headers: {
+                    'Content-Type': 'multipart/form-data'
+                }
+            }
+            ).then((response) => {
+                console.log(response)
+                
+            }
+            )
         }
 
     },
@@ -24,7 +40,6 @@ createApp({
                 console.log(response);
                 this.boolean_subjects = response.data
             });
-        // axios.post('')
 
     },
     computed: {
