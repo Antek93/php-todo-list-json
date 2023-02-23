@@ -1,20 +1,26 @@
 [
     {
-        "subject": "HTML"
+        "subject": "HTML",
+        "done": false
     },
     {
-        "subject": "CSS"
+        "subject": "CSS",
+        "done": false
     },
     {
-        "subject": "Responsive Design"
+        "subject": "Responsive Design",
+        "done": false
     },
     {
-        "subject": "Javascript"
+        "subject": "Javascript",
+        "done": false
     },
     {
-        "subject": "PHP"
+        "subject": "PHP",
+        "done": false
     },
     {
-        "subject": "Laravel"
+        "subject": "Laravel",
+        "done": false
     }
 ]

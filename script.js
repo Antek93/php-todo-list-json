@@ -3,22 +3,31 @@ console.log('java is working fine');
 const { createApp } = Vue;
 
 createApp({
-    data () {
+    data() {
         return {
-            boolean_subjects: []
+            boolean_subjects: [],
+            newSubject: '',
         };
 
     },
     methods: {
+        cross(element) {
+            element.done = !element.done
+
+        }
 
     },
     created() {
         axios
-        .get('http://localhost/PHP-ToDo-List-JSON/api.php')
-        .then((response) => {
-            console.log(response);
-            this.boolean_subjects = response.data
-        });
+            .get('./api.php')
+            .then((response) => {
+                console.log(response);
+                this.boolean_subjects = response.data
+            });
+        // axios.post('')
+
+    },
+    computed: {
 
     }
 

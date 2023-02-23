@@ -10,9 +10,31 @@ $subjects = file_get_contents('database.json');
 
 // var_dump($boolean_subjects);
 
+$subjectList = json_decode($subjects);
+
+if (isset($_POST['newSubject'])) {
+    $newSubject = $_POST['newSubject'];
+    
+}
+
 header('Content-Type: application/json');
 
 echo $subjects;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // DA PHP A DATABASE
 
@@ -50,4 +72,3 @@ echo $subjects;
 // header('Content-Type: application/json');
 
 // echo $json_boolean_subjects;
-

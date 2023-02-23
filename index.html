@@ -7,17 +7,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP ToDo List JSON</title>
     <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/d67383daac.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div id="app">
-        <h1>
-            <ul>
-                <li v-for="subject in boolean_subjects">
-                    {{ subject.subject }}
-                </li>
-            </ul>
-        </h1>
+        <div class="mainContainer">
+            <div class="listContainer">
+                <ul>
+                    <li v-for="subject in boolean_subjects">
+                        <div class="subjectContainer">
+                            <div class="subject" @click="cross(subject)" :class="{
+                                done: subject.done
+                            }">
+                                {{ subject.subject }}
+                            </div>
+                            <div class="trashContainer">
+                                <a href="#"><i class="fa-regular fa-trash-can"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <form action="api.php" method="POST">
+                        <input id="newSubject" name="newSubject" type="text">
+                        <button>
+                            Add new subject
+                        </button>
+                </form>
+            </div>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
