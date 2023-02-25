@@ -28,9 +28,9 @@
                         </div>
                     </li>
                 </ul>
-                <form action="api.php" method="POST" @submit.prevent="addSubject()">
-                        <input v-model="userSubject" id="newSubject" name="newSubject" type="text">
-                        <button>
+                <form action="create.php" method="POST" @submit.prevent="addSubject()">
+                        <input minlength="1" required v-model="userSubject" id="newSubject" name="newSubject" type="text" placeholder="inserisci la nuova materia">
+                        <button type="submit">
                             Add new subject
                         </button>
                 </form>
